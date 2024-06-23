@@ -7,3 +7,21 @@
 - **Built on Tiny Stories Dataset**: The AI model is trained on the [TinyStories dataset](https://huggingface.co/datasets/roneneldan/TinyStories), a collection of short stories with a limited vocabulary suitable for children.
 - **LLM Architecture**: Uses a llama2 transformer/tokenizer architecture optimized for 'small' models (<300K parameters), adhering to LLM standards.
 - **Proof-of-Concept**: Intended to showcase the capabilities of focused Large Language Models (LLMs) in interactive applications.
+
+Certainly! Here's the updated description for each of the files:
+
+### Source Code Files (`/src` directory)
+
+- **main.c**: This is the main entry point of the application. It initializes the game environment, handles user input, and manages the flow of the game logic, including integrating the LLM for story generation.
+
+- **llm.c / llm.h**: These files contain the implementation of the Large Language Model (LLM) used in the game. `llm.c` includes functions for text generation based on input and interactions with the dataset. `llm.h` provides function prototypes, macros, and data structure declarations. Adapted from llama2.c by Andrej Karpathy, the LLM architecture is optimized efficient text generation and interaction within the game.
+
+- **prompts.h**: This header file likely predefined prompts or messages used within the game.
+
+### Resource Files (`/resources` directory)
+
+- **font.ttf**: This TrueType font file (Roboto in this case) is used for displaying text within the game. Fonts can be replaced with other TrueType fonts to change the visual style of text throughout the application.
+
+- **models.bin**: This binary file contains pre-trained models used by the LLM for text generation. Built on llama2 architecture and trained on the Tiny Stories dataset. They can be retrained on alternative datasets to adapt to different narrative styles or themes.
+
+- **tokens.bin**: This binary file may store tokenization data or vocabulary mappings used by the LLM during text processing.
